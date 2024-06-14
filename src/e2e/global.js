@@ -11,7 +11,7 @@ export default async function GlobalSetup(config) {
   console.log("already logged in", url);
 
   await expect(
-    page.getByRole("heading", { name: "Getting Starteds" })
+    page.getByRole("heading", { name: "Getting Started" })
   ).toBeVisible();
 
   // Select the input by id and type into
