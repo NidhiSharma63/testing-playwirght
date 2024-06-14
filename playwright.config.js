@@ -20,7 +20,7 @@ export default defineConfig({
   workers: undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: "html",
-  globalSetup: path.resolve(__dirname, "./src/e2e/global.ts"),
+  globalSetup: path.resolve(__dirname, "./src/e2e/global.js"),
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     baseURL: "http://127.0.0.1:3000",
