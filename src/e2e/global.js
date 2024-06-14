@@ -15,7 +15,7 @@ export default async function GlobalSetup(config: FullConfig) {
 
   // Select the input by id and type into
 
-  await context.storageState({ path: storageState as string });
+  await context.storageState({ path: storageState });
 
   await browser.close();
 }
