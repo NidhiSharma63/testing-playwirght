@@ -1,5 +1,6 @@
-import { chromium, expect, type FullConfig } from "@playwright/test";
-export default async function GlobalSetup(config: FullConfig) {
+import { chromium, expect } from "@playwright/test";
+
+export default async function GlobalSetup(config) {
   const { storageState } = config.projects[0].use;
   const browser = await chromium.launch();
   const context = await browser.newContext();
