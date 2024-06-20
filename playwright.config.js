@@ -1,4 +1,4 @@
-import { defineConfig, devices } from "@playwright/test";
+import { defineConfig } from "@playwright/test";
 import dotenv from "dotenv";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -23,33 +23,34 @@ export default defineConfig({
   globalSetup: path.resolve(__dirname, "./src/e2e/global.js"),
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    baseURL: "http://127.0.0.1:3000",
+    baseURL: "http://localhost:3000",
     storageState: path.resolve(__dirname, "./src/e2e/auth.json"),
     trace: "on-first-retry",
+    browserName: "chromium",
   },
 
   /* Configure projects for major browsers */
-  projects: [
-    {
-      name: "chromium",
-      use: { ...devices["Desktop Chrome"] },
-    },
+  // projects: [
+  //   {
+  //     name: "chromium",
+  //     use: { ...devices["Desktop Chrome"] },
+  //   },
 
-    {
-      name: "firefox",
-      use: { ...devices["Desktop Firefox"] },
-    },
+  //   {
+  //     name: "firefox",
+  //     use: { ...devices["Desktop Firefox"] },
+  //   },
 
-    {
-      name: "webkit",
-      use: { ...devices["Desktop Safari"] },
-    },
-  ],
+  //   {
+  //     name: "webkit",
+  //     use: { ...devices["Desktop Safari"] },
+  //   },
+  // ],
 
   /* Run your local dev server before starting the tests */
   webServer: {
     command: "npm run start",
-    url: "http://127.0.0.1:3000",
+    url: "http://localhost:3000",
     reuseExistingServer: true,
     timeout: 120 * 1000,
   },
