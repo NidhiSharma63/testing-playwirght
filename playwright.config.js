@@ -49,7 +49,7 @@ export default defineConfig({
   projects: [
     {
       name: "setup",
-      testMatch: "**/*.setup.ts",
+      testMatch: "**/*.setup.js",
     },
     {
       name: "e2e",
