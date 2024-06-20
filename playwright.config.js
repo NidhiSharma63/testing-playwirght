@@ -20,11 +20,11 @@ export default defineConfig({
   workers: undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: "html",
-  globalSetup: path.resolve(__dirname, "./src/e2e/global.js"),
+  // globalSetup: path.resolve(__dirname, "./src/e2e/global.js"),
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     baseURL: "http://localhost:3000",
-    storageState: path.resolve(__dirname, "./src/e2e/auth.json"),
+    // storageState: path.resolve(__dirname, "./src/e2e/auth.json"),
     trace: "on-first-retry",
     browserName: "chromium",
   },
