@@ -46,7 +46,19 @@ export default defineConfig({
   //     use: { ...devices["Desktop Safari"] },
   //   },
   // ],
-
+  projects: [
+    {
+      name: "setup",
+      testMatch: "**/*.setup.ts",
+    },
+    {
+      name: "e2e",
+      dependencies: ["setup"],
+      use: {
+        storageState: path.resolve(__dirname, "src/e2e/auth.json"),
+      },
+    },
+  ],
   /* Run your local dev server before starting the tests */
   webServer: {
     command: "npm run start",
