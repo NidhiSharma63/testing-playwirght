@@ -54,9 +54,9 @@ export default defineConfig({
     {
       name: "e2e",
       dependencies: ["setup"],
-      use: {
-        storageState: path.resolve(__dirname, "src/e2e/auth.json"),
-      },
+      // use: {
+      //   storageState: path.resolve(__dirname, "src/e2e/auth.json"),
+      // },
     },
   ],
   /* Run your local dev server before starting the tests */

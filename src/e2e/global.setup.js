@@ -35,8 +35,8 @@ setup("do login", async ({ page }) => {
 
   // Select the input by id and type into
 
-  const storageState = path.join(__dirname, "./auth.json");
-  await page.context.storageState({ path: storageState });
+  // const storageState = path.join(__dirname, "./auth.json");
+  // await page.context.storageState({ path: storageState });
 
   // await browser.close();
 });
